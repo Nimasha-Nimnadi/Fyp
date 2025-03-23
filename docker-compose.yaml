@@ -1,0 +1,37 @@
+services:
+  model-backend:
+    build: ./ai-model
+    # volumes:
+    #   - type: bind
+    #     source: ./ai-model/api/
+    #     target: /model_app/api/
+    # ports:
+    #   - 8080:8080
+
+  backend:
+    build: ./api
+    # volumes:
+    #   - type: bind
+    #     source: ./api/index.js
+    #     target: /app/index.js
+    ports:
+      - 4000:4000
+    environment:
+      MONGO:
+      JWT_SECRET:
+      MODEL_BASE_URL: http://ddt-model-backend-1:8080
+    depends_on:
+      - model-backend
+
+  frontend:
+    build: ./web
+    # volumes:
+    #   - type: bind
+    #     source: ./web/nginx-config/default.conf
+    #     target: /etc/nginx/conf.d/default.conf
+    ports:
+      - 3000:80
+    depends_on:
+      - backend
+    environment:
+      API_BASE_URL: "http://ddt-backend-1:4000"

@@ -1,0 +1,142 @@
+/* General container setup */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header styling */
+  .chat-header {
+    background-color: #4a90e2;
+    padding: 16px;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 2px solid #357ab7;
+  }
+  
+  /* Messages list */
+  .messages-list {
+    min-height: fit-content;
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fcf5f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Space between messages */
+  }
+  
+  /* Styling each message */
+  .message {
+    max-width: 70%; /* This ensures that the message bubbles are not too wide */
+    padding: 12px 18px;
+    border-radius: 18px;
+    word-wrap: break-word; /* Ensures long words are wrapped inside the bubble */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-wrap: break-word; /* Ensures that text breaks and does not overflow */
+    word-break: break-word; /* Breaks words if they don't fit within the bubble */
+  }
+  
+  .user-msg {
+    background-color: #4a90e2;
+    color: white;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+  }
+  
+  .other-msg {
+    background-color: #e3e4e8;
+    color: #333;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+  }
+  
+  .message-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input area */
+  .input-area {
+    display: flex;
+    padding: 16px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    align-items: center;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    padding: 12px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .message-input:focus {
+    border-color: #4a90e2;
+  }
+  
+  .send-button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .send-button:hover {
+    background-color: #357ab7;
+  }
+  
+  /* Attachment button */
+  .attach-button {
+    background-color: transparent;
+    border: none;
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* Hide the file input */
+  .file-input {
+    display: none; /* This input is hidden, and will be triggered by the label */
+  }
+  
+  /* Add smooth transition for message input */
+  .message-input, .send-button {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Add smooth scrolling to messages */
+  .messages-list {
+    scroll-behavior: smooth;
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+  

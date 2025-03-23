@@ -1,0 +1,10 @@
+env/
+.idea/
+Data Pre Process/
+*.env
+*.env.*
+env.*
+Sample_Images/
+Tranning/
+README.md
+
