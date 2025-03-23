@@ -1,0 +1,103 @@
+/* General Navbar Styling */
+.navbar {
+    background-color: #1e90ff; /* Sky blue background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .navbar-logo .logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .navbar-logo .logo-derma {
+    color: #f0f0f0;
+  }
+  
+  .navbar-logo .logo-insight {
+    color: #c6c6c6;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #ffeb3b;
+    transform: scale(1.05);
+  }
+  
+  .navbar-link li {
+    margin: 0;
+    transition: transform 0.2s;
+  }
+  
+  .navbar-link:hover li {
+    transform: translateX(5px);
+  }
+  
+  .profile-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .navbar-logo .logo-text {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+  

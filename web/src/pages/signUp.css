@@ -1,0 +1,117 @@
+/* General container setup */
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding: 20px;
+  }
+  
+  .sign-up-form-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .sign-up-form-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sign-up-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .sign-up-title:hover {
+    color: #1e90ff;
+  }
+  
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-field {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    border-color: #1e90ff;
+    outline: none;
+  }
+  
+  .error-text {
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  .submit-button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #007acc;
+    transform: scale(1.05);
+  }
+  
+  .submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .sign-in-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .sign-in-text {
+    color: #1e90ff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .sign-in-text:hover {
+    color: #007acc;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sign-up-form-container {
+      padding: 30px;
+    }
+  }
+  

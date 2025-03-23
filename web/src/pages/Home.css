@@ -1,0 +1,270 @@
+/* General layout */
+.home-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.home-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  object-fit: cover;
+  width: auto;
+  opacity: 0.8;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.hero-section:hover .home-image {
+  transform: scale(1.1);
+}
+
+.hero-content {
+  z-index: 1;
+  color: #fff;
+  padding: 50px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #1e90ff;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3092e2;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-out 0.5s;
+}
+
+/* Upload Button */
+.upload-button1 {
+  background-color: #3190ef;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-button1:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+.upload-button1:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Image Preview */
+.image-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.image-preview-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover .close-icon {
+  color: #1e90ff;
+}
+
+.uploaded-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin-top: 15px;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-out;
+}
+
+.result-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.error-text {
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.predict-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.predict-button:hover {
+  background-color: #007acc;
+}
+
+.predict-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Example images section styling */
+.example-images-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.example-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.example-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.example-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.example-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .upload-button {
+    font-size: 1rem;
+  }
+
+  .uploaded-image {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .image-preview-content {
+    width: 90%;
+  }
+
+  .example-images {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
