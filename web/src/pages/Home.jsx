@@ -31,7 +31,8 @@ export default function Home() {
     const formData = new FormData();
     formData.append("file", selectedImage);
     try {
-      const modelRes = await fetch("/api/predict", {
+      // const modelRes = await fetch("/api/predict", {
+      const modelRes = await fetch("http://localhost:8080/predict", {
         method: "POST",
         body: formData,
       });
@@ -141,12 +142,11 @@ export default function Home() {
             <p className="image-caption">Psoriasis</p>
           </div>
           <div className="example-image">
-            <img src={e}alt="Eczema" />
+            <img src={e} alt="Eczema" />
             <p className="image-caption">Eczema</p>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
